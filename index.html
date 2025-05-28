@@ -1,43 +1,143 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600;700&display=swap');
+
+    body {
+      background-color: #121212;
+      font-family: 'Poppins', sans-serif;
+      color: #e0e0ff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .about {
+      grid-column: 1 / -1;
+      background-color: rgba(0, 150, 255, 0.2);
+      border: 3px solid #0096FF;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #0096FF88;
+      padding: 25px 35px;
+      transition: box-shadow 0.4s ease, transform 0.3s ease;
+    }
+
+    .about:hover {
+      box-shadow: 0 0 25px #00c3ffcc, 0 0 40px #00c3ffcc;
+      transform: translateY(-6px);
+    }
+
+    .about h1 {
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.4rem;
+      letter-spacing: 1.2px;
+      color: #cce7ff;
+    }
+
+    .project {
+      background-color: rgba(0, 150, 255, 0.1);
+      border: 3px solid #0096FF;
+      border-radius: 12px;
+      padding: 20px 25px;
+      box-shadow: 0 0 8px #0096FF88;
+      transition: box-shadow 0.4s ease, transform 0.3s ease;
+    }
+
+    .project:hover {
+      box-shadow: 0 0 20px #00c3ffcc, 0 0 30px #00c3ffcc;
+      transform: translateY(-4px);
+    }
+
+    .project h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #cce7ff;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #00c3ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    .project p {
+      margin-bottom: 15px;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: #d0d8ff;
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 2px solid #0096FF;
+      box-shadow: 0 0 10px #0096FF66;
+    }
+  </style>
 </head>
 <body>
   <main>
-    <div class="div-wrapper">
+    <div class="container">
 
-      <div class="one">
+      <section class="about">
         <h1>About Me</h1>
-        <h3>Hi, my name is Sahil Dayal. I am a junior in high school and I am taking AP Computer Science Essentials and Principles! Throughout the class, we have worked on multiple porjects and I would like to share some of my work with you!</h3>
-      </div>
+        <p>Hi, my name is Sahil Dayal. I am a junior in high school and I am taking AP Computer Science Essentials and Principles! Throughout the class, we have worked on multiple projects and I would like to share some of my work with you!</p>
+      </section>
 
-      <div class="two">
-        <h1>The Digital Clock</h1>
-        <a href="https://codepen.io/SahilD111/pen/bNdNPwW">Check out the Live Digital Clock!</a>
-        <h2>This project was the first one we did without our teacher's guidance. The project is quite simple but still pretty neat, check it out in the link above!</h2>
-        <img src="blob:chrome-untrusted://media-app/d51d69bf-e805-4110-b3b7-f9c1cefdebab" alt="Screenshot of Digital Clock"
-            width="100%">
-      </div>
+      <section class="project">
+        <h2>The Digital Clock</h2>
+        <a href="https://codepen.io/SahilD111/pen/bNdNPwW" target="_blank" rel="noopener noreferrer">Check out the Live Digital Clock!</a>
+        <p>This project was the first one we did without our teacher's guidance. The project is quite simple but still pretty neat, check it out in the link above!</p>
+        <img src="your-image-path/digital-clock.png" alt="Screenshot of Digital Clock" />
+      </section>
 
-      <div class="three">
-        <h1>Double Ball Pong</h1>
-        <a href="https://codepen.io/SahilD111/pen/RNPNzKr">Play some Double Ball Pong!</a>
-       <h2>This project was defintely much more difficult than the first. It is a game of pong, but as you can see by the title, it has two balls!</h2>
-        <img src="blob:chrome-untrusted://media-app/b24d48df-dc3b-481f-a28e-41436bce6253" alt="Screenshot of Pong" width="100%">
-      </div>
+      <section class="project">
+        <h2>Double Ball Pong</h2>
+        <a href="https://codepen.io/SahilD111/pen/RNPNzKr" target="_blank" rel="noopener noreferrer">Play some Double Ball Pong!</a>
+        <p>This project was definitely much more difficult than the first. It is a game of pong, but as you can see by the title, it has two balls!</p>
+        <img src="your-image-path/double-ball-pong.png" alt="Screenshot of Pong" />
+      </section>
 
-      <div class="four">
-        <h1>The Color Switcher</h1>
-        <a href="https://codepen.io/SahilD111/pen/RNwBjBV">Find Some Colors!</a>
-        <h2>This project was definetly a step down from the fun game of pong. There are so many colors to see in our color switcher,check it out!</h2>
-        <img src="blob:chrome-untrusted://media-app/fb0bf443-111e-4ca4-8978-93e0c98a4ea1" alt="Screenshot of Color Switcher" width="100%">
-      </div>
-
-      <div class="eight">Contact: 157024@husd.k12.ca.us</div>
-      <div class="nine">© 2025 Sahil Dayal</div>
+      <section class="project">
+        <h2>The Color Switcher</h2>
+        <a href="https://codepen.io/SahilD111/pen/RNwBjBV" target="_blank" rel="noopener noreferrer">Find Some Colors!</a>
+        <p>This project was definitely a step down from the fun game of pong. There are so many colors to see in our color switcher, check it out!</p>
+        <img src="your-image-path/color-switcher.png" alt="Screenshot of Color Switcher" />
+      </section>
 
     </div>
   </main>
 </body>
 </html>
+
+
