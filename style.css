@@ -40,22 +40,6 @@ body {
   transform: translateY(-6px);
 }
 
-.project:nth-child(2) {
-  grid-column: 1 / 2;
-  grid-row: 2;
-}
-
-.project:nth-child(3) {
-  grid-column: 3 / 4;
-  grid-row: 2;
-}
-
-.project:nth-child(4) {
-  grid-column: 2 / 3;
-  grid-row: 3;
-  justify-self: center;
-}
-
 .project {
   background-color: rgba(0, 150, 255, 0.2);
   border: 3px solid #0096FF;
@@ -103,4 +87,22 @@ body {
   border: 2px solid #0096FF;
   box-shadow: 0 0 10px #0096FF66;
 }
+
+/* Position projects for triangle layout */
+.project:nth-of-type(1) {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.project:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+
+.project:nth-of-type(3) {
+  grid-column: 2 / 3;
+  grid-row: 3;
+  justify-self: center;
+}
+
 
