@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 100px;
   margin: 40px auto;
   padding: 0 10px;
   display: grid;
@@ -43,7 +43,7 @@ body {
 .project {
   background-color: rgba(0, 150, 255, 0.2);
   border: 3px solid #0096FF;
-  border-radius: 12px;
+  border-radius: 18px;
   box-shadow: 0 0 12px #0096FF88;
   padding: 25px 35px;
   transition: box-shadow 0.4s ease, transform 0.3s ease;
