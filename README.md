@@ -33,7 +33,7 @@ A simple and interactive color switching tool that allows users to change the ba
 ## Links
 
 - 💻 **GitHub Repository**: [https://github.com/Sahil081001/sahil-d](https://github.com/Sahil081001/sahil-d)
-- 🌐 **Live Site**: [https://yourusername.github.io/final-project-portfolio/](https://yourusername.github.io/final-project-portfolio/)
+- 🌐 **Live Site**: [[https://yourusername.github.io/final-project-portfolio/](https://yourusername.github.io/final-project-portfolio/](https://sahil081001.github.io/sahil-d/))
 
 ---
 
