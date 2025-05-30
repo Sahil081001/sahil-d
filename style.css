@@ -53,67 +53,30 @@ main {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
   max-width: 960px;
   margin: 0 auto;
-}
-
-.project:nth-child(1) {
-  grid-column: 1 / 2;
-  grid-row: 1;
-}
-
-.project:nth-child(2) {
-  grid-column: 2 / 4;
-  grid-row: 1;
-}
-
-.project:nth-child(3) {
-  grid-column: 1 / 4;
-  grid-row: 2;
-  justify-self: center;
-  max-width: 650px;
 }
 
 .project {
   background: linear-gradient(145deg, #2a2a4a, #1a1a35);
   border-radius: 18px;
-  padding: 25px 20px 35px;
+  padding: 30px 25px 40px;
   box-shadow: 0 0 25px #5577ff88;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #b0b8ffcc;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: default;
   user-select: none;
   position: relative;
   overflow: hidden;
 }
 
-.project::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -25%;
-  width: 150%;
-  height: 200%;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.15) 0%, rgba(255,255,255,0) 60%);
-  transform: rotate(25deg);
-  transition: transform 0.7s ease;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.project:hover::before {
-  transform: rotate(25deg) translateX(100%);
-}
-
 .project:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 0 45px #88aaffcc;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 50px #88aaffcc;
   z-index: 10;
 }
 
@@ -124,19 +87,16 @@ main {
   margin-bottom: 20px;
   color: #d3dfff;
   text-shadow: 0 0 8px #99aaffcc;
-  position: relative;
-  z-index: 1;
 }
 
 .project p {
   font-family: 'Lora', serif;
   font-size: 1rem;
-  margin-top: 18px;
+  margin-top: 15px;
   color: #ccd6ffcc;
   text-align: center;
   line-height: 1.4;
-  position: relative;
-  z-index: 1;
+  flex-grow: 1;
 }
 
 .embed-wrapper {
@@ -146,8 +106,7 @@ main {
   border: 3px solid #99aaffcc;
   box-shadow: 0 0 20px #7788ffcc;
   transition: box-shadow 0.3s ease;
-  position: relative;
-  z-index: 1;
+  margin-top: 20px;
 }
 
 .embed-wrapper:hover {
@@ -156,30 +115,19 @@ main {
 
 iframe {
   width: 100%;
-  height: 360px;
+  height: 320px;
   border: none;
   background: #151535;
 }
 
-@media (max-width: 700px) {
-  .projects {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-  }
-  .project:nth-child(1),
-  .project:nth-child(2),
-  .project:nth-child(3) {
-    grid-column: auto;
-    grid-row: auto;
-    max-width: 100%;
-  }
-  iframe {
-    height: 280px;
-  }
+@media (max-width: 480px) {
   .about {
     font-size: 1.1rem;
     padding: 30px 20px;
     margin-bottom: 35px;
+  }
+  iframe {
+    height: 240px;
   }
 }
 
