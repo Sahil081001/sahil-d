@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600;700&display=swap');
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+/* Body and fonts */
 body {
   background-color: #121212;
   font-family: 'Poppins', sans-serif;
@@ -7,18 +13,24 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
+/* Container for centering and layout */
 .container {
-  max-width: 100px;
-  margin: 40px auto;
-  padding: 0 10px;
+  max-width: 900px; 
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto;
   gap: 30px;
 }
 
+/* About section spans all columns */
 .about {
   grid-column: 1 / 4;
   background-color: rgba(0, 150, 255, 0.2);
@@ -27,6 +39,7 @@ body {
   box-shadow: 0 0 12px #0096FF88;
   padding: 25px 35px;
   transition: box-shadow 0.4s ease, transform 0.3s ease;
+  text-align: center;
 }
 
 .about:hover {
@@ -34,6 +47,7 @@ body {
   transform: translateY(-6px);
 }
 
+/* Project cards */
 .project {
   background-color: rgba(0, 150, 255, 0.2);
   border: 3px solid #0096FF;
@@ -41,6 +55,10 @@ body {
   box-shadow: 0 0 12px #0096FF88;
   padding: 25px 35px;
   transition: box-shadow 0.4s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .project:hover {
@@ -75,6 +93,7 @@ body {
   color: #d0d8ff;
 }
 
+/* Images styling */
 .project img {
   max-width: 100%;
   border-radius: 8px;
@@ -92,6 +111,13 @@ body {
   grid-column: 3 / 4;
   grid-row: 2;
 }
+
+.project:nth-of-type(3) {
+  grid-column: 2 / 3;
+  grid-row: 3;
+  justify-self: center;
+}
+
 
 .project:nth-of-type(3) {
   grid-column: 2 / 3;
