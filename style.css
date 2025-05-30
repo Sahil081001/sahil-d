@@ -1,11 +1,10 @@
-/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Body and fonts */
+
 body {
   background-color: #121212;
   font-family: 'Poppins', sans-serif;
@@ -20,7 +19,7 @@ body {
   padding: 20px;
 }
 
-/* Container for centering and layout */
+
 .container {
   max-width: 900px; 
   width: 100%;
@@ -30,7 +29,7 @@ body {
   gap: 30px;
 }
 
-/* About section spans all columns */
+
 .about {
   grid-column: 1 / 4;
   background-color: rgba(0, 150, 255, 0.2);
@@ -47,7 +46,7 @@ body {
   transform: translateY(-6px);
 }
 
-/* Project cards */
+
 .project {
   background-color: rgba(0, 150, 255, 0.2);
   border: 3px solid #0096FF;
@@ -93,7 +92,7 @@ body {
   color: #d0d8ff;
 }
 
-/* Images styling */
+
 .project img {
   max-width: 100%;
   border-radius: 8px;
@@ -101,7 +100,7 @@ body {
   box-shadow: 0 0 10px #0096FF66;
 }
 
-/* Position projects for triangle layout */
+
 .project:nth-of-type(1) {
   grid-column: 1 / 2;
   grid-row: 2;
